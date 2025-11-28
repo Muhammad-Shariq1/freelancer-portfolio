@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -8,100 +15,312 @@
 </head>
 
 <div class="font-(--font-gilroy)" >
-<body> 
-
-
-<header class="flex items-center  mt-10 mx-20 gap-5">
+<body class="relative" > 
+  
  
+
+  <img class="absolute -z-10 "  src="./img/Decorator.png" alt="backgroundimg">
+  <img class=" absolute -z-10 h-screen w-screen" src="./img/fr.png" alt="backgroundimg">
+
+
+<header class="flex items-center h-20 mx-20 gap-5 relative">
+
+
   <h1 class="font-extrabold text-[#25A4AD] text-[24px] capitalize">payme</h1>
 
- 
-  <ul class="flex gap-5 items-center font-medium max-sm:hidden max-md:hidden max-lg:hidden capitalize">
-    <li>home</li>
-    <li>about</li>
-    <li>testimonials</li>
-    <li>contact</li>
-  </ul>
+<ul id="navMenu" class="flex gap-5 items-center font-medium capitalize max-lg:hidden">
+  <li><a  class="hover:text-[#25A4AD]">home</a></li>
+  <li><a href="#about" class="hover:text-[#25A4AD]">about</a></li>
+  <li><a href="#testimonials" class="hover:text-[#25A4AD]">testimonials</a></li>
+  <li><a href="#contact" class="hover:text-[#25A4AD]">contact</a></li>
+</ul>
 
-  
-  <div class="flex ml-auto gap-2 font-medium ">
+
+  <div class="flex ml-auto gap-2 font-medium items-center relative">
+
     <button class="px-4 py-2 capitalize">sign up</button>
     <button class="px-4 py-2 capitalize border border-[#25A4AD] rounded">sign up</button>
+
+   
+    <button id="hamburger" class="ml-3 lg:hidden flex flex-col gap-1 cursor-pointer">
+      <span class="w-6 h-[3px] bg-black block"></span>
+      <span class="w-6 h-[3px] bg-black block"></span>
+      <span class="w-6 h-[3px] bg-black block"></span>
+    </button>
+
+    <ul id="onphone"
+    class="hidden z-30 flex-col gap-4 bg-white absolute top-15 right-0 w-40  py-4 px-5 shadow-md font-medium capitalize lg:hidden">
+    <a href=""><li class="hover:text-[#25A4AD]   " >home</li></a>
+    <a href="#about"><li class="hover:text-[#25A4AD]   " >about</li></a>
+    <a href="#testimonials"></a><li class="hover:text-[#25A4AD]   " >testimonials</li></a>
+    <a href="#contact"><li class="hover:text-[#25A4AD]   " >contact</li></a>
+</ul>
+
+
   </div>
 </header>
 
 
-
-<div class="relative">
-  <img src="./img/Decorator.png" alt="backgroundimg">
-  <img class="h-screen w-screen" src="./img/fr.png" alt="backgroundimg">
-
-  <div class="absolute inset-0 mt-20 flex justify-center flex-row max-sm:flex-col max-md:flex-col max-lg:flex-col max-sm:text-center max-md:text-center max-lg:text-center max-sm:ml-5 max-sm:mr-5 max-sm:items-center max-md:items-center max-lg:items-center  max-md:ml-5 max-md:mr-5 max-lg:ml-5 max-lg:mr-5 max-xl:ml-10 max-xl:mr-10   ">
-    <div>
-      <h1 class="font-thin mt-20 text-[128px] max-sm:text-[64px] max-md:text-[76px] max-lg:text-[88px]  text-[#494949] capitalize">providing</h1>
+<div class="flex flex-row  max-sm:flex-col max-md:flex-col  justify-center items-center  gap-10 ml-5 mr-5 max-sm:text-center max-md:text-center " >
+  <div>
+     <h1 class="font-thin mt-20 text-[128px] max-sm:text-[64px] max-md:text-[76px] max-lg:text-[88px]  text-[#494949] capitalize">providing</h1>
       <h1 class="font-thin text-[128px] max-sm:text-[64px] max-md:text-[76px] max-lg:text-[88px]  text-[#494949] capitalize">best</h1>
       <h1 class="font-semibold text-[80px] max-sm:text-[48px] max-md:text-[54px] max-lg:text-[60px] text-[#25A4AD]">WEB Services</h1>
       <h1 class="font-thin text-[20px]  lg:w-120">
         Letter of on become he tended active enable to. Vicinity relation sensible sociable surprise screened no up as.
       </h1>
-    </div>
-
-<div class="relative  mt-10">
-  <div class="flex justify-center" >
-    <img 
-    class="w-[700px] h-[600px]  max-lg:w-[500px] max-lg:h-[500px] max-md:w-[450px] max-md:h-[450px] max-sm:w-[350px] max-sm:h-[350px]" 
-    src="./img/Header.png" alt="Header image">
+  </div>
+  <div class="relative max-sm:w-[300px] max-sm:h-[500px] w-[500px] h-[500px]    " >
+      <img 
+    class="w-[700px] h-[600px]  max-sm:mr-10 absolute max-lg:w-[500px] max-lg:h-[500px] max-md:w-[450px] max-md:h-[450px] max-sm:w-[350px] max-sm:h-[350px]" 
+    src="./img/Header.png" alt="Header image"> 
 
 
   <img 
-    class="absolute top-0 left-1/2 transform lg:ml-20 -translate-x-1/2 w-[450px] h-[600px] max-lg:w-[500px] max-lg:h-[500px] max-md:w-[450px] max-md:h-[450px] max-sm:w-[350px] max-sm:h-[350px]" 
-    src="./img/my.png" alt="Overlay image">
-
+    class="absolute top-0  lg:ml-20  w-[450px] h-[600px] max-lg:w-[500px] max-lg:h-[500px] max-md:w-[450px] max-md:h-[450px] max-sm:w-[350px] max-sm:h-[350px]" 
+    src="./img/my.png" alt="Overlay image"> 
+  </div>
 </div>
-    
-<div class="mt-20 flex justify-center gap-10 ">
+
+
+ <section class="flex justify-center items-center gap-30 flex-wrap mt-20 ml-5 mr-5 ">
   <img class="w-[150px]" src="./img/Group 542.png" alt="logo">
   <img class="w-[150px]" src="./img/Group 543.png" alt="logo">
   <img class="w-[150px]" src="./img/Group 544.png" alt="logo">
   <img class="w-[150px]" src="./img/Group 545.png" alt="logo">
-  <img class="w-[150px]" src="./img/Group 542.png" alt="logo">
-</div>
+  <img class="w-[150px] mb-10" src="./img/Group 542.png" alt="logo">
+</section> 
 
-</div>
-</div>
-</div>
- 
-<div class="ml-5 mr-5 flex flex-col text-center " >
+
+ <div class="ml-5 mr-5 flex flex-col text-center " >
   <h1 class="font-thin text-[#363636] text-[60px] " >best<span class="font-semibold text-[#25A4AD] text-[60px] " > services</span> </h1>
   <p  >Letter of on become he tended active enable to. Vicinity relation sensible sociable </p>
   <p>surprise screened no up as.</p>
+</div> 
+
+
+<div class="flex justify-center mr-5 ml-5 gap-10 items-center">
+  
+  <div class="flex flex-col items-center">
+  
+    <div class="relative flex items-center justify-center text-center">
+      <img src="./img/webdevelopment.png" alt="webdevpic">
+      <div class="absolute inset-0 flex flex-col items-center justify-center">
+        <h1 class="text-xl font-semibold text-white max-sm:text-[12px] ">webdevelopment</h1>
+        <img  src="./img/star.png" alt="star" class="mt-1 max-sm:w-[100px] ">
+      </div>
+    </div>
+
+    <div class="relative flex items-center justify-center text-center mt-5">
+      <img src="./img/database.png" alt="databasepic">
+      <div class="absolute inset-0 flex flex-col items-center justify-center">
+        <h1 class="text-xl font-semibold text-white max-sm:text-[12px] ">database</h1>
+        <img src="./img/star.png" alt="star" class="mt-1 max-sm:w-[100px] ">
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center mt-10">
+  
+    <div class="relative flex items-center justify-center text-center">
+      <img src="./img/webdesigning.png" alt="webdespic">
+      <div class="absolute inset-0 flex flex-col items-center justify-center">
+        <h1 class="text-xl font-semibold text-white max-sm:text-[12px] ">webdesigning</h1>
+        <img src="./img/star.png" alt="star" class="mt-1 max-sm:w-[100px] ">
+      </div>
+    </div>
+
+  
+    <div class="relative flex items-center justify-center text-center mt-5">
+      <img src="./img/seo.png" alt="seopic">
+      <div class="absolute inset-0 flex flex-col items-center justify-center">
+        <h1 class="text-xl font-semibold text-white max-sm:text-[12px] ">SEO</h1>
+        <img src="./img/star.png" alt="star" class="mt-1  max-sm:w-[100px] ">
+      </div>
+    </div>
+  </div>
+
 </div>
 
-<div class="grid grid-cols-3 mt-20 grid-rows-1 " >
-  <div></div>
-  <div class="flex gap-5" >
-    <!-- 2 images left -->
-  <div class=" flex-col w-[300px] h-[400px]  " >
-    <div>
-    <img  src="./img/webdevelopment.png" alt="webdevpic"  >
-    
-    </div>
-    <div>
-    <img class="mt-5" src="./img/database.png" alt="databasepic">
-    </div>
+
+
+<div class="grid grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2 mt-10 max-lg:grid-cols-2 max-xl:grid-cols-3  ">
+
+<div class="flex mt-10 mb-10 justify-center text-center ">
+  <div class="w-2 h-70  "></div>
+  <div class=" p-5 w-75 h-70 border-[#161616] border-2 rounded-3xl ">
+     <h1 class="text-[#25A4AD] font-bold mb-5"> Work Load</h1>
+     <p class="text-[#000000] font-light mb-5 " >Outward clothes promise at gravity do excited. Sufficient particular impossible by reasonable oh expression is. Yet preference connection unpleasant yet melancholy but end appearance.</p>
+     <button class="underline text-[#25A4AD] " > learn more </button>
   </div>
-  <!-- 2 images right -->
-    <div class=" mt-10 flex-col w-[300px] h-[400px]" >
-    <div>
-    <img src="./img/webdesigning.png" alt="webdespic">
-    </div>
-    <div>
-    <img class="mt-5" src="./img/seo.png" alt="seopic">
-    </div>
-  </div>
-  </div>
-  <div></div>
 </div>
+
+<div class="flex mt-10 mb-10 justify-center text-center ">
+  <div class="w-2 h-70  "></div>
+  <div class=" p-5 w-75 h-70 border-[#161616] border-2 rounded-3xl ">
+     <h1 class="text-[#000000] font-bold mb-5">Time Tracking</h1>
+     <p class="text-[#000000] font-light mb-5" >Outward clothes promise at gravity do excited. Sufficient particular impossible by reasonable oh expression is. Yet preference connection unpleasant yet melancholy but end appearance.</p>
+      <button class="underline " > learn more </button>
+  </div>
+</div>
+
+<div class="flex mt-10 mb-10 justify-center text-center ">
+  <div class="w-2 h-70  "></div>
+  <div class=" p-5 w-75 h-70 border-[#161616] border-2 rounded-3xl ">
+     <h1 class="text-[#000000] font-bold mb-5">Collaborations</h1>
+     <p class="text-[#000000] font-light mb-5 " >Outward clothes promise at gravity do excited. Sufficient particular impossible by reasonable oh expression is. Yet preference connection unpleasant yet melancholy but end appearance.</p>
+     <button class="underline " > learn more </button>
+  </div>
+</div>
+</div>
+
+<div class="flex justify-center" >
+<button class="w-[150px] h-[50px] border-2 border-[#25A4AD] text-[#25A4AD]  " >Explore All</button>
+</div>
+
+
+
+<div  id="testimonials" class="relative py-20 w-11/12 ml-5 mr-5 "  >
+
+   
+    <div class="flex flex-col justify-center items-center">
+      <h2 class="font-extralight text-4xl mt-5 xl:text-5xl">What<span class="font-extrabold text-[#25A4AD]"> Clients</span> Say</h2>
+      <p class="text-center mt-8 xl:w-[600px]">Letter of on become he tended active enable to. Vicinity relation sensible sociable surprise screened no up as.</p>
+
+      <div class="overflow-x-hidden">
+        <div class="clientCarousel flex flex-col justify-center items-center mt-10 gap-4 lg:flex-row">
+          <div class="w-[350px] h-[250px] bg-cover rounded-tl-[140px] lg:w-[400px] lg:h-[264px] xl:h-[350px] bg-center bg-[url('./img/+.png')]"></div>
+          <div class="bg-[#F8F8F8] rounded-br-[140px] w-[350px] lg:w-[450px] xl:h-[350]">
+            <div class="py-4 px-3 xl:py-10 flex flex-col xl:gap-2">
+              <h2 class="font-bold text-xl">Best Developers</h2>
+              <p>Outward clothes promise at gravity do excited. Sufficient particular impossible by reasonable oh expression is. Yet preference connection unpleasant yet melancholy but end appearance. And excellence partiality estimating terminated day everything.</p>
+              <img class=" w-40 h-10" src="./img/star.png " alt="">
+              <h3 class="font-bold">Robert Johnson</h3>
+              <p>Director at Behance</p>
+            </div>
+          </div>
+        </div>
+       
+        
+      </div>
+
+      
+    </div>
+  
+
+</div>
+
+
+
+<div class="text-center  " >
+<h1 class=" text-[#363636] text-[60px] font-thin mt-5" >Our<span class="font-semibold text-[#25A4AD] text-[60px] " > pricing plan</span> </h1>
+</div>
+
+
+<div class="grid grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2 mt-10 max-lg:grid-cols-2 max-xl:grid-cols-3  ">
+
+<div class="flex max-lg:mt-10  mt-30 mb-10 justify-center text-center ">
+  <div class="w-2 h-90  "></div>
+  <div class=" p-5 w-75 h-90  rounded-3xl ">
+     <h1 class=" font-bold mb-5"> For Starter</h1>
+     <h1 class="font-bold mb-5 " >$59</h1>
+     <h3>Feedback Categorization</h3>
+     <h3>Features prioritization</h3>
+     <h3>Real-time collaboration</h3>
+     <h3>Feedback loop notifications</h3>
+     <h3>Essential dev tools integrations</h3>
+     <button class=" p-5 text-[#25A4AD] border-2 border-[#25A4AD] mt-5 " > Request Demo </button>
+  </div>
+</div>
+
+<div class="flex max-lg:mt-10  mt-10 mb-10 justify-center text-center ">
+  <div class="w-2 h-90  "></div>
+  <div class=" p-5 w-75 h-90   text-[#25A4AD]  rounded-3xl ">
+     <h1 class="text-[#25A4AD] font-bold mb-5"> For Teams</h1>
+     <h1 class="font-bold mb-5 " >$59</h1>
+     <h3>Feedback Categorization</h3>
+     <h3>Features prioritization</h3>
+     <h3>Real-time collaboration</h3>
+     <h3>Feedback loop notifications</h3>
+     <h3>Essential dev tools integrations</h3>
+     <button class=" p-5 text-[#ffffff] border-2 bg-[#25A4AD] mt-5 " > Request Demo </button>
+  </div>
+</div>
+
+<div class="flex max-lg:mt-10   mt-30 mb-10 justify-center text-center ">
+  <div class="w-2 h-90  "></div>
+  <div class=" p-5 w-75 h-90  rounded-3xl ">
+     <h1 class="text-[#000000] font-bold mb-5"> For Company</h1>
+     <h1 class="font-bold mb-5 " >Custom</h1>
+     <h3>Feedback Categorization</h3>
+     <h3>Feedback loop notifications</h3>
+     <h3>Essential dev tools integrations</h3>
+     <button class=" p-5 text-[#25A4AD] border-2 border-[#25A4AD] mt-5 " > Request Demo </button>
+  </div>
+</div>
+
+</div>
+
+<div  id="about" class="flex justify-center ml-5 mr-5 " >
+ <div>
+     <h1 class="font-medium mt-20 mb-20 text-[110px] max-sm:text-[64px] max-md:text-[76px] max-lg:text-[88px]  text-[#25A4AD] text-center capitalize">FAQs</h1>
+     
+      <h1 class="font-thin text-[24px]  lg:w-150">
+       she met humoured sir breeding her. Six curiosity day assurance bed necessary.
+      </h1>
+      <p  class="font-thin text-[16px] mt-10  lg:w-150" >Relation so in confined smallest children unpacked delicate. Why sir end believe uncivil respect. Always get adieus nature day course for common. My little garret repair to desire he esteem.</p>
+      <h1 class="mt-10 font-medium "  > +  And excellence partiality estimating terminated day everything?</h1> 
+      <h1 class="mt-10 font-medium "  > +  Latter person am secure of estate genius at?</h1> 
+      <h1 class="mt-10 font-medium "  > +  Whatever landlord yourself at by pleasure of children be?</h1> 
+    </div>
+</div>
+
+
+
+
+ <footer id="contact" class=" w-full relative bg-[#313131] text-white pt-20 pb-6 overflow-hidden flex  mt-30 justify-center">
+    
+    <div class="z-10 bg-[#2C2C2C] w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] absolute top-[-75px] left-[-75px] lg:top-[-200px] lg:left-[-200px] rotate-45"></div>
+    <div class="z-10 bg-[#2C2C2C] w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] absolute bottom-[-75px] left-[-75px] lg:bottom-[-200px] lg:left-[-200px] rotate-45"></div>
+    <div class="z-10 bg-[#2C2C2C] w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] absolute top-[-75px] right-[-75px] lg:top-[-200px] lg:right-[-200px] rotate-45"></div>
+    <div class="z-10 bg-[#2C2C2C] w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] absolute bottom-[-75px] right-[-75px] lg:bottom-[-200px] lg:right-[-200px] rotate-45"></div>
+
+
+    <div class="flex flex-col justify-center items-center w-11/12 z-20">
+      <h2 class="text-4xl font-black text-center xl:text-6xl">People who are<br>ready took these courses!</h2>
+      <button class=" font-medium text-white border-2 border-white py-3 px-9 mt-14 hover:cursor-pointer hover:bg-white hover:text-black hover:scale-105 active:bg-white active:text-black active:scale-105 transition-all duration-300">Schedule demo</button>
+      <div class="flex flex-wrap justify-between  mt-20 gap-14 xl:mt-32">
+        <div class="flex flex-col gap-3 max-w-[250px]">
+          <h1 class="font-bold text-[36px] "   >Payme </h1>
+          <p>Crechterwoord K12 182 DK Alknjkcb, All Rights Reserved</p>
+        </div>
+        <div class="flex flex-col items-start gap-4">
+          <h3 class="font-bold">Links</h3>
+          <a  href="#" class="mt-3 hover:underline hover:cursor-pointer">Overons</a>
+          <a href="#" class="hover:underline hover:cursor-pointer">Social Media</a>
+          <a href="#" class="hover:underline hover:cursor-pointer">Counters</a>
+          <a href="#" class="hover:underline hover:cursor-pointer">Contact</a>
+        </div>
+        <div class="flex flex-col items-start gap-4">
+          <h3 class="font-bold">Company</h3>
+          <a  href="#" class="mt-3 hover:underline hover:cursor-pointer">Terms & Conditions</a>
+          <a href="#" class="hover:underline hover:cursor-pointer">Privacy Policy</a>
+          <a href="#" class="hover:underline hover:cursor-pointer">Contact</a>
+        </div>
+        <div class="flex flex-col items-start gap-4 max-w-[150px]">
+          <h3 class="font-bold">Get in touch</h3>
+          <a  href="#" class="mt-3">Crechterwoord K12 182 DK Alknjkcb</a>
+          <a href="#">085-1232455</a>
+          <a href="#">info@payme.net</a>
+        </div>
+      </div>
+      <h2 class="mt-16">© 2021 Payme. All rights reserved</h2>
+    </div>
+  </footer>
+
+
+
+<script src="app.js" ></script>
 
 </body>
 
